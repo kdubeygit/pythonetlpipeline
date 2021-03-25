@@ -36,5 +36,5 @@ schema = json.loads(schema)
 builder = pjs.ObjectBuilder(schema)
 ns = builder.build_classes()
 Person = ns.ExampleSchema
-james = Person(firstName="James", lastName="Bond")
+russel = Person(firstName="Russel", lastName="Crow")
 print(james.firstName)
