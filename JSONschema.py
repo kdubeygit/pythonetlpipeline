@@ -24,11 +24,8 @@ schema = '''{
         "gender": {
             "type": "string",
             "enum": ["male", "female"]
+        }
         },
-        "deceased": {
-            "enum": ["yes", "no", 1, 0, "true", "false"]
-            }
-    },
     "required": ["firstName", "lastName"]
 } '''
 
@@ -36,5 +33,6 @@ schema = json.loads(schema)
 builder = pjs.ObjectBuilder(schema)
 ns = builder.build_classes()
 Person = ns.ExampleSchema
-russel = Person(firstName="Russel", lastName="Crow")
-print(james.firstName)
+russel = Person(firstName="Russeel", lastName="Crow",age = 10, gender = 'male',dogs = ['Sugar','blue'])
+print(russel.firstName)
+print(russel.dogs[0])
